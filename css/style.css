@@ -1,0 +1,611 @@
+
+* { margin: 0; padding: 0;box-sizing: border-box;}
+
+/*base*/
+html {font-size: 16px;}
+
+body {font-family: Arial, sans-serif;color: #1e293b;background-color: #f8fafc;}
+
+button,
+input {font: inherit;}
+
+/*login page*/
+.auth-page {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #f8fafc
+        );
+}
+
+/*login card*/
+.auth-card {
+    width: 100%;
+    max-width: 430px;
+
+    padding: 40px;
+
+    background-color: white;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+
+    box-shadow:
+        0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+.auth-header {
+    text-align: center;
+
+    margin-bottom: 32px;
+}
+
+.logo {
+    margin-bottom: 24px;
+
+    color: #2563eb;
+
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.auth-header h1 {
+    margin-bottom: 8px;
+
+    color: #0f172a;
+
+    font-size: 30px;
+}
+
+.auth-header p {
+    color: #64748b;
+
+    font-size: 15px;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #334155;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+
+    outline: none;
+
+    color: #1e293b;
+    background-color: white;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+.form-group input::placeholder {
+    color: #94a3b8;
+}
+
+.form-group input:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+.primary-button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #2563eb;
+    color: white;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s,
+        transform 0.2s;
+}
+
+.primary-button:hover {
+    background-color: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+.primary-button:active {
+    transform: translateY(0);
+}
+
+
+.message {
+    min-height: 20px;
+
+    margin-top: 15px;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+.auth-footer {
+    margin-top: 25px;
+    padding-top: 20px;
+
+    border-top: 1px solid #e2e8f0;
+
+    text-align: center;
+}
+
+.auth-footer p {
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+.auth-footer a {
+    color: #2563eb;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/*dashboard*/
+.dashboard-page {
+    min-height: 100vh;
+
+    background-color: #f8fafc;
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 40px;
+
+    background-color: white;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.dashboard-header .logo {
+    margin: 0;
+}
+
+.secondary-button {
+    padding: 10px 18px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+
+    background-color: white;
+    color: #334155;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s,
+        border-color 0.2s;
+}
+
+.secondary-button:hover {
+    background-color: #f1f5f9;
+    border-color: #94a3b8;
+}
+
+.dashboard-content {
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 60px 40px;
+}
+
+.dashboard-intro {
+    margin-bottom: 40px;
+}
+
+.dashboard-intro h1 {
+    margin-bottom: 10px;
+
+    color: #0f172a;
+
+    font-size: 36px;
+}
+
+.dashboard-intro p {
+    max-width: 650px;
+
+    color: #64748b;
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.dashboard-actions {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 24px;
+}
+
+.dashboard-card {
+    display: block;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.05);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        border-color 0.2s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #bfdbfe;
+
+    box-shadow:
+        0 15px 35px rgba(15, 23, 42, 0.08);
+}
+
+.dashboard-card h2 {
+    margin-bottom: 10px;
+
+    color: #0f172a;
+
+    font-size: 21px;
+}
+
+.dashboard-card p {
+    color: #64748b;
+
+    line-height: 1.6;
+}
+
+/*trip page*/
+.trip-page {
+    min-height: 100vh;
+
+    background-color: #f8fafc;
+}
+
+.trip-content {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 50px 40px;
+}
+
+.trip-header {
+    margin-bottom: 30px;
+}
+
+.trip-header h1 {
+    margin-bottom: 10px;
+
+    color: #0f172a;
+
+    font-size: 34px;
+}
+
+.trip-header p {
+    color: #64748b;
+
+    line-height: 1.6;
+}
+
+.trip-card {
+    padding: 30px;
+
+    background-color: white;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.trip-result {
+    margin-top: 30px;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    line-height: 1.7;
+}
+
+.trip-result:empty {
+    display: none;
+}
+
+.trip-result h2 {
+    margin-bottom: 15px;
+
+    color: #0f172a;
+}
+
+.trip-result p {
+    margin-bottom: 12px;
+
+    color: #475569;
+}
+
+.trip-result hr {
+    margin: 20px 0;
+
+    border: none;
+    border-top: 1px solid #e2e8f0;
+}
+
+/*my trips*/
+.trips-page {
+    min-height: 100vh;
+
+    background-color: #f8fafc;
+}
+
+
+.trips-content {
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 50px 40px;
+}
+
+.trips-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.trips-header h1 {
+    margin-bottom: 8px;
+
+    color: #0f172a;
+
+    font-size: 34px;
+}
+
+.trips-header p {
+    color: #64748b;
+}
+
+
+.create-trip-button {
+    width: auto;
+
+    padding: 11px 18px;
+
+    text-decoration: none;
+}
+
+#tripsContainer {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.trip-history-card {
+    position: relative;
+
+    padding: 24px;
+
+    min-height: 180px;
+
+    background-color: white;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.05);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        border-color 0.2s;
+}
+
+.trip-history-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #bfdbfe;
+
+    box-shadow:
+        0 14px 30px rgba(15, 23, 42, 0.08);
+}
+
+
+.trip-history-card h2 {
+    margin-bottom: 15px;
+
+    color: #0f172a;
+
+    font-size: 22px;
+}
+
+
+.trip-summary {
+    color: #64748b;
+
+    line-height: 1.6;
+}
+
+
+.trip-summary strong {
+    color: #334155;
+}
+
+.delete-trip-button {
+    position: absolute;
+
+    right: 20px;
+    bottom: 20px;
+
+    padding: 7px 12px;
+
+    border: 1px solid #fecaca;
+    border-radius: 7px;
+
+    background-color: white;
+    color: #dc2626;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.delete-trip-button:hover {
+    background-color: #fef2f2;
+
+    border-color: #fca5a5;
+}
+
+
+.trip-details {
+    display: none;
+
+    margin-top: 20px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #e2e8f0;
+
+    color: #475569;
+
+    line-height: 1.7;
+
+    white-space: pre-line;
+}
+
+
+.trip-history-card.open {
+    grid-column: 1 / -1;
+
+    cursor: default;
+}
+
+
+.trip-history-card.open .trip-details {
+    display: block;
+}
+
+/* GENERATED TRIP PLAN */
+
+.generated-plan {
+    margin-top: 20px;
+}
+
+.generated-day {
+    padding: 24px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.generated-day:last-child {
+    border-bottom: none;
+}
+
+.generated-day h3 {
+    margin-bottom: 20px;
+    color: #0f172a;
+    font-size: 22px;
+}
+
+.generated-day h4 {
+    margin-top: 18px;
+    margin-bottom: 8px;
+    color: #334155;
+    font-size: 15px;
+}
+
+.generated-day ul {
+    padding-left: 22px;
+}
+
+.generated-day li {
+    margin-bottom: 7px;
+    color: #475569;
+    line-height: 1.6;
+}
+
+.trip-summary h3 {
+    margin-bottom: 10px;
+    color: #0f172a;
+    font-size: 19px;
+}
+
+.trip-summary p {
+    color: #475569;
+    line-height: 1.7;
+}
+
+
+
+
+
